@@ -1,0 +1,42 @@
+﻿@model MusicLibrary.Models.Song
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+    <h2>Details</h2>
+    <hr /><br /><br />
+    <div>
+        <dl class="dl">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Artist)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Artist)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Album)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Album)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Genre)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.SongID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
